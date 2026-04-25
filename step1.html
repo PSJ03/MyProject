@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Dev Roadmap</title>
+    <title>DEV JOURNEY</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -32,7 +32,7 @@
   <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">🌐 WebDev 101</a>
+        <a class="navbar-brand fw-bolder" href="index.html">💻 DEV JOURNEY</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -65,60 +65,122 @@
 
     <div class="container my-5 flex-grow-1">
       <div class="mb-5 text-center">
-        <h2 class="fw-bold">Step 1: HTML5 - 웹의 기초와 시맨틱 구조</h2>
-        <p class="lead text-muted">
-          정보보호학 관점에서 바라본 체계적인 웹 마크업의 중요성
-        </p>
+        <h2 class="fw-bold">Step 1: HTML5와 보안 기초</h2>
+        <p class="lead text-muted">안전한 웹의 시작, 시맨틱 구조 이해</p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 mb-5">
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0">
+          <div class="card h-100 shadow-sm border-0 text-center p-3">
             <div class="card-body">
-              <div class="mb-3 text-primary">
-                <i
-                  class="bi bi-file-earmark-code"
-                  style="font-size: 2.5rem"
-                ></i>
-              </div>
-              <h5 class="card-title fw-bold">HTML5와 마크업</h5>
-              <p class="card-text">
-                HTML은 웹 문서를 만드는 가장 기본 언어입니다. 텍스트, 이미지,
-                영상 등을 태그(Tag)를 통해 구조화하며, 하이퍼텍스트를 통해
-                정보를 연결합니다.
+              <i class="bi bi-file-earmark-code text-primary fs-1 mb-3"></i>
+              <h5 class="fw-bold">HTML5 정의</h5>
+              <p class="small text-secondary">
+                웹 문서를 구성하는 가장 기본 언어로, 하이퍼텍스트를 통해 정보를
+                구조화합니다.
               </p>
             </div>
           </div>
         </div>
-
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0 bg-light">
+          <div class="card h-100 shadow-sm border-0 text-center p-3">
             <div class="card-body">
-              <div class="mb-3 text-success">
-                <i class="bi bi-diagram-3" style="font-size: 2.5rem"></i>
-              </div>
-              <h5 class="card-title fw-bold">시맨틱(Semantic) 태그</h5>
-              <p class="card-text">
-                <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
-                <code>&lt;main&gt;</code> 등의 의미 있는 태그를 사용합니다. 이는
-                검색 엔진 최적화(SEO)와 웹 접근성을 높이는 핵심 요소입니다.
+              <i class="bi bi-diagram-3 text-success fs-1 mb-3"></i>
+              <h5 class="fw-bold">시맨틱 태그</h5>
+              <p class="small text-secondary">
+                의미 있는 태그를 사용하여 검색 엔진 최적화(SEO)와 웹 접근성을
+                향상시킵니다.
               </p>
             </div>
           </div>
         </div>
-
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0">
+          <div class="card h-100 shadow-sm border-0 text-center p-3">
             <div class="card-body">
-              <div class="mb-3 text-danger">
-                <i class="bi bi-shield-check" style="font-size: 2.5rem"></i>
-              </div>
-              <h5 class="card-title fw-bold">보안과 구조화</h5>
-              <p class="card-text">
-                잘 구조화된 HTML은 웹 취약점 분석의 시작점입니다. 올바른 태그
-                사용은 비정상적인 스크립트 삽입을 방어하는 기초적인 보안 설계가
-                됩니다.
+              <i class="bi bi-shield-check text-danger fs-1 mb-3"></i>
+              <h5 class="fw-bold">구조와 보안</h5>
+              <p class="small text-secondary">
+                올바른 마크업은 비정상적인 스크립트 삽입을 방어하는 기초 보안
+                설계가 됩니다.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <h4 class="fw-bold mb-4">웹 개발 필수 태그 정보</h4>
+        <div class="accordion shadow-sm" id="tagAccordion">
+          <div class="accordion-item border-0 border-bottom">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button fw-bold text-dark bg-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#acc1"
+              >
+                1. 사용자 입력 양식 (Forms)
+              </button>
+            </h2>
+            <div
+              id="acc1"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#tagAccordion"
+            >
+              <div class="accordion-body text-secondary">
+                <p class="small mb-3">
+                  사용자 데이터를 서버로 전달하기 위한 핵심 구성 요소입니다.
+                </p>
+                <ul class="list-unstyled small mb-0">
+                  <li class="mb-2">
+                    <i class="bi bi-check2-square me-2 text-primary"></i
+                    ><strong>입력 태그:</strong> <code>&lt;form&gt;</code>,
+                    <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>
+                  </li>
+                  <li>
+                    <i class="bi bi-check2-square me-2 text-primary"></i
+                    ><strong>전송 버튼:</strong>
+                    <code>&lt;button type="submit"&gt;</code>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed fw-bold text-dark bg-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#acc2"
+              >
+                2. 멀티미디어와 표 (Media & Table)
+              </button>
+            </h2>
+            <div
+              id="acc2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#tagAccordion"
+            >
+              <div class="accordion-body text-secondary">
+                <p class="small mb-3">
+                  정보를 시각적으로 구조화하고 미디어를 배치하는 방법입니다.
+                </p>
+                <ul class="list-unstyled small mb-0">
+                  <li class="mb-2">
+                    <i class="bi bi-check2-square me-2 text-primary"></i
+                    ><strong>미디어:</strong> <code>&lt;img&gt;</code>,
+                    <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>
+                  </li>
+                  <li>
+                    <i class="bi bi-check2-square me-2 text-primary"></i
+                    ><strong>테이블:</strong> <code>&lt;table&gt;</code>,
+                    <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>,
+                    <code>&lt;td&gt;</code>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -127,7 +189,7 @@
 
     <footer>
       <div class="container text-center">
-        <p>© 2026 Web Programming Midterm Project</p>
+        <p>© 2026 Web Programming 1st Semester Project</p>
       </div>
     </footer>
 
