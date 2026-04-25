@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Dev Roadmap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* 추가적인 일관성 디자인 */
+      .hero-section {
+        background: #f8f9fa;
+        padding: 60px 0;
+        border-bottom: 1px solid #dee2e6;
+      }
+      .feature-card {
+        transition: transform 0.3s;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+      footer {
+        background: #343a40;
+        color: white;
+        padding: 30px 0;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">🌐 WebDev 101</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">홈</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="step1.html">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="step2.html">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="step3.html">Javascript</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">ABOUT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5 flex-grow-1">
+      <div class="mb-5 text-center">
+        <h2 class="fw-bold">Step 1: HTML5 - 웹의 기초와 시맨틱 구조</h2>
+        <p class="lead text-muted">
+          정보보호학 관점에서 바라본 체계적인 웹 마크업의 중요성
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <div class="mb-3 text-primary">
+                <i
+                  class="bi bi-file-earmark-code"
+                  style="font-size: 2.5rem"
+                ></i>
+              </div>
+              <h5 class="card-title fw-bold">HTML5와 마크업</h5>
+              <p class="card-text">
+                HTML은 웹 문서를 만드는 가장 기본 언어입니다. 텍스트, 이미지,
+                영상 등을 태그(Tag)를 통해 구조화하며, 하이퍼텍스트를 통해
+                정보를 연결합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0 bg-light">
+            <div class="card-body">
+              <div class="mb-3 text-success">
+                <i class="bi bi-diagram-3" style="font-size: 2.5rem"></i>
+              </div>
+              <h5 class="card-title fw-bold">시맨틱(Semantic) 태그</h5>
+              <p class="card-text">
+                <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+                <code>&lt;main&gt;</code> 등의 의미 있는 태그를 사용합니다. 이는
+                검색 엔진 최적화(SEO)와 웹 접근성을 높이는 핵심 요소입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <div class="mb-3 text-danger">
+                <i class="bi bi-shield-check" style="font-size: 2.5rem"></i>
+              </div>
+              <h5 class="card-title fw-bold">보안과 구조화</h5>
+              <p class="card-text">
+                잘 구조화된 HTML은 웹 취약점 분석의 시작점입니다. 올바른 태그
+                사용은 비정상적인 스크립트 삽입을 방어하는 기초적인 보안 설계가
+                됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container text-center">
+        <p>© 2026 Web Programming Midterm Project</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
