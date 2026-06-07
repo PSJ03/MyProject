@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WEB DEV GUIDE</title>
+    <title>WEB DEV GUIDE - Step 3</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -41,22 +41,29 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse py-1" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">홈</a>
+              <a class="nav-link px-3" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="step1.html">HTML</a>
+              <a class="nav-link px-3" href="step1.html">Step 1 (HTML)</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="step2.html">CSS</a>
+              <a class="nav-link px-3" href="step2.html">Step 2 (CSS)</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="step3.html">Javascript</a>
+              <a class="nav-link px-3" href="step3.html">Step 3 (JS)</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link px-3 text-warning fw-bold" href="#">
+                Step 4 (Next.js)
+                <i class="bi bi-box-arrow-up-right fs-6 ms-1"></i>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link px-3" href="about.html">About</a>
             </li>
           </ul>
         </div>
@@ -70,7 +77,7 @@
       </div>
 
       <div class="row align-items-center g-5">
-        <div class="col-md-7">
+        <div class="col-md-12">
           <h4 class="fw-bold mb-4 text-dark">Javascript: 동적 상호작용</h4>
           <p class="text-secondary mb-4">
             자바스크립트는 정적인 HTML/CSS에 생동감을 불어넣는 언어입니다.
@@ -94,80 +101,68 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="col-md-5">
-          <div class="card border-0 shadow-lg overflow-hidden">
-            <div
-              class="card-header bg-dark text-white d-flex align-items-center py-2"
-            >
-              <div class="d-flex gap-1 me-3">
-                <div
-                  style="
-                    width: 10px;
-                    height: 10px;
-                    background: #ff5f56;
-                    border-radius: 50%;
-                  "
-                ></div>
-                <div
-                  style="
-                    width: 10px;
-                    height: 10px;
-                    background: #ffbd2e;
-                    border-radius: 50%;
-                  "
-                ></div>
-                <div
-                  style="
-                    width: 10px;
-                    height: 10px;
-                    background: #27c93f;
-                    border-radius: 50%;
-                  "
-                ></div>
-              </div>
-              <small class="opacity-75">interaction.js</small>
-            </div>
-            <div class="card-body bg-light p-4">
-              <pre
-                class="mb-4"
-                style="font-size: 0.8rem; line-height: 1.5"
-              ><code>btn.addEventListener('click', () => {
-  document.body.style.color = 'blue';
-  alert('이벤트가 발생했습니다!');
-});</code></pre>
-              <div class="border-top pt-3 text-center">
-                <button
-                  class="btn btn-sm btn-primary rounded-pill px-4 shadow-sm"
-                  disabled
-                >
-                  Run Interaction
-                </button>
-              </div>
-            </div>
-          </div>
-          <br />
-          <div
-            class="alert alert-warning border-0 shadow-sm d-flex align-items-center py-2 px-3 mb-3"
-            role="alert"
+    <div class="container my-5">
+      <div class="card shadow-sm border-0">
+        <div
+          class="card-header bg-dark text-white d-flex justify-content-between align-items-center py-2 px-4"
+        >
+          <span class="fs-5 fw-bold"
+            ><i class="bi bi-code-slash me-2"></i>Live Code Editor</span
           >
-            <i class="bi bi-exclamation-triangle-fill me-2 fs-5"></i>
-            <div style="font-size: 0.75rem; line-height: 1.4">
-              <strong>안내:</strong> 현재 페이지는 HTML/CSS 구조 전시용입니다.
-              실제 동적 기능과 퀴즈 시스템은
-              <strong>기말고사 프로젝트</strong>에서 구현될 예정입니다.
+          <div>
+            <button
+              id="resetBtn"
+              class="btn btn-outline-light btn-sm fw-bold px-3 me-2"
+              style="border-radius: 50px"
+            >
+              <i class="bi bi-arrow-counterclockwise"></i> Reset
+            </button>
+            <button
+              id="runBtn"
+              class="btn btn-success btn-sm fw-bold px-4 shadow-sm"
+              style="border-radius: 50px"
+            >
+              Run ❯
+            </button>
+          </div>
+        </div>
+
+        <div class="card-body p-0">
+          <div class="row g-0">
+            <div class="col-md-6 border-end">
+              <textarea
+                id="codeEditor"
+                data-step="step3"
+                class="form-control border-0 rounded-0 bg-light p-4"
+                style="
+                  height: 400px;
+                  font-family: Consolas, monospace;
+                  font-size: 15px;
+                  resize: none;
+                "
+                spellcheck="false"
+              ></textarea>
+            </div>
+            <div class="col-md-6 bg-white position-relative">
+              <iframe
+                id="outputFrame"
+                class="w-100 h-100 border-0"
+                style="min-height: 400px"
+              ></iframe>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <footer>
-      <div class="container text-center">
-        <p>© 2026 Web Programming 1st Semester Project</p>
-      </div>
+    <footer class="bg-dark text-white text-center py-6 mt-auto">
+      © 2026 Web Programming Portfolio. No personal info included.
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
