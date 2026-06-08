@@ -8,6 +8,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <style>
       /* 추가적인 일관성 디자인 */
       .hero-section {
@@ -26,6 +30,85 @@
         color: white;
         padding: 30px 0;
         margin-top: 50px;
+      }
+
+      [data-bs-theme='dark'] {
+        background-color: #121212 !important;
+        color: #e0e0e0 !important;
+      }
+      [data-bs-theme='dark'] body {
+        background-color: #121212 !important;
+      }
+      [data-bs-theme='dark'] .navbar.bg-dark,
+      [data-bs-theme='dark'] footer.bg-dark {
+        background-color: #000 !important;
+        border-bottom: 1px solid #333;
+      }
+      [data-bs-theme='dark'] .card {
+        background-color: #1e1e1e !important;
+        color: #f8f9fa !important;
+        border: 1px solid #333 !important;
+      }
+      [data-bs-theme='dark'] .text-muted {
+        color: #a0a0a0 !important;
+      }
+      [data-bs-theme='dark'] .text-secondary {
+        color: #bcbcbc !important;
+      }
+      [data-bs-theme='dark'] .text-dark {
+        color: #ffffff !important;
+      }
+      [data-bs-theme='dark'] .bg-light {
+        background-color: #2c2c2c !important;
+      }
+
+      /* --- [추가] 다크모드 디테일 보정 --- */
+
+      /* 1. index.html: 메인 하얀 박스 (hero-section) */
+      [data-bs-theme='dark'] .hero-section {
+        background-color: #1e1e1e !important;
+        border-bottom: 1px solid #333 !important;
+      }
+
+      /* 2. step1.html: 아코디언 탭 및 하얀 배경 보정 */
+      [data-bs-theme='dark'] .bg-white {
+        background-color: #1e1e1e !important;
+      }
+      [data-bs-theme='dark'] .accordion-item {
+        background-color: #1e1e1e !important;
+        border-color: #333 !important;
+      }
+      [data-bs-theme='dark'] .accordion-button {
+        background-color: #1e1e1e !important;
+        color: #ffffff !important;
+      }
+      /* 아코디언이 열려있을 때의 색상 */
+      [data-bs-theme='dark'] .accordion-button:not(.collapsed) {
+        background-color: #2c2c2c !important;
+        color: #ffffff !important;
+      }
+      /* 아코디언 우측 화살표 아이콘 하얗게 반전 */
+      [data-bs-theme='dark'] .accordion-button::after {
+        filter: invert(1);
+      }
+
+      /* 3. about.html: 하단 버튼 색상 보정 */
+      [data-bs-theme='dark'] .btn-dark {
+        background-color: #2c2c2c !important;
+        border-color: #444 !important;
+      }
+      [data-bs-theme='dark'] .btn-outline-dark {
+        color: #e0e0e0 !important;
+        border-color: #e0e0e0 !important;
+      }
+      [data-bs-theme='dark'] .btn-outline-dark:hover {
+        background-color: #e0e0e0 !important;
+        color: #121212 !important;
+      }
+
+      /* 코드 에디터 결과창은 다크모드 무시하고 무조건 하얀색 고정 */
+      #outputFrame {
+        background-color: #ffffff !important;
       }
     </style>
   </head>
@@ -206,6 +289,15 @@
       © 2026 Web Programming Portfolio. No personal info included.
     </footer>
 
+    <div class="position-fixed bottom-0 end-0 p-4" style="z-index: 1050">
+      <button
+        id="darkModeToggle"
+        class="btn btn-dark rounded-circle shadow mb-2 d-flex justify-content-center align-items-center"
+        style="width: 50px; height: 50px"
+      >
+        <i class="bi bi-moon-fill fs-5"></i>
+      </button>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
   </body>

@@ -195,3 +195,46 @@ document.addEventListener('DOMContentLoaded', function () {
   runBtn.addEventListener('click', runCode)
   runCode()
 })
+
+// 페이지 로드 시 즉시 테마 적용 (깜빡임 방지)
+if (localStorage.getItem('theme') === 'dark') {
+  document.documentElement.setAttribute('data-bs-theme', 'dark')
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  // 1. 초기 테마 설정
+  const htmlEl = document.documentElement
+  const toggleBtn = document.getElementById('darkModeToggle')
+  const icon = toggleBtn ? toggleBtn.querySelector('i') : null
+
+  if (localStorage.getItem('theme') === 'dark') {
+    htmlEl.setAttribute('data-bs-theme', 'dark')
+    if (icon) icon.classList.replace('bi-moon-fill', 'bi-sun-fill')
+  }
+
+  // 2. 다크모드 토글
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const isDark = htmlEl.getAttribute('data-bs-theme') === 'dark'
+      if (isDark) {
+        htmlEl.removeAttribute('data-bs-theme')
+        localStorage.setItem('theme', 'light')
+        if (icon) icon.classList.replace('bi-sun-fill', 'bi-moon-fill')
+      } else {
+        htmlEl.setAttribute('data-bs-theme', 'dark')
+        localStorage.setItem('theme', 'dark')
+        if (icon) icon.classList.replace('bi-moon-fill', 'bi-sun-fill')
+      }
+    })
+  }
+
+  // 3. 기존 기능들 (네비게이션 액티브, 에디터 로직 등)
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html'
+  document.querySelectorAll('.navbar-nav .nav-link').forEach((link) => {
+    if (link.getAttribute('href') === currentPath)
+      link.classList.add('active', 'fw-bold', 'text-white')
+  })
+
+  // (여기에 나머지 기존 코드들 - 에디터, 스크롤 버튼 등 그대로 유지)
+  // ... (기존에 작성하셨던 editor 로직과 scrollTopBtn 로직은 이 아래에 붙이시면 됩니다)
+})
